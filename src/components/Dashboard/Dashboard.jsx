@@ -19,6 +19,13 @@ const Dashboard = () => {
         setCards([...cards, content]);
     };
 
+    const removeCard = (id) => {
+        console.log('removeCard');
+        const newCardsArray = cards.filter((card) => card.id !== id);
+
+        setCards(newCardsArray);
+    };
+
     const closeModal = () => {
         setModalVisibility(false);
     };
@@ -26,20 +33,26 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             <Header />
-            <div className='cards__container'>
+            <div className='main'>
                 {cards.length === 0 ? (
-                    <div className='cards__container--nocard'>
+                    <div className='main__nocards'>
                         <p className='message'>Ahora mismo no dispones de ninguna card</p>
                     </div>
                 ) : (
-                    cards.map((card, id) => (
-                        <Card
-                            key={id}
-                            title={card.title}
-                            description={card.description}
-                            image={card.image}
-                        />
-                    ))
+                    <div className='main__container-cards'>
+                        {cards.map((card, id) => (
+                            <Card
+                                key={id}
+                                id={card.id}
+                                title={card.title}
+                                description={card.description}
+                                image={card.image}
+                                removeCard={() => {
+                                    removeCard(card.id);
+                                }}
+                            />
+                        ))}
+                    </div>
                 )}
             </div>
             <RoundButton onClick={viewForm} />

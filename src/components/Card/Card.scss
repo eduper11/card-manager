@@ -6,6 +6,13 @@
     border-radius: 0.5rem;
     margin: 1rem;
 
+    .iconbutton {
+        position: absolute;
+        color: $color-interface-white;
+        top: 1rem;
+        right: 1rem;
+    }
+
     &__title {
         position: absolute;
         padding: 0 1rem;
@@ -14,6 +21,7 @@
         font-size: 2rem;
         text-align: center;
         color: $color-interface-white;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
