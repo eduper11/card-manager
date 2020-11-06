@@ -31,9 +31,9 @@
         &__container-cards {
             background-color: $lux50;
             padding: 2rem;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
         }
     }
 }
