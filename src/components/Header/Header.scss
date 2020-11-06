@@ -1,0 +1,12 @@
+.header {
+    height: 7.2rem;
+    background-color: $lux500;
+    display: flex;
+    align-items: center;
+
+    .header-title {
+        color: $color-interface-white;
+        margin-left: 4rem;
+        font-size: 2rem;
+    }
+}

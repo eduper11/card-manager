@@ -1,0 +1,23 @@
+.buttonprimary {
+    background-color: $color-interface-white;
+    border: 0.2rem solid $luxNeutral700;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Sans';
+    text-transform: uppercase;
+    padding: 0.8rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border-color: $lux500;
+        color: $lux500;
+        cursor: pointer;
+    }
+
+    &:focus {
+        border-color: $lux500;
+        color: $lux500;
+        outline: none;
+        box-shadow: 0 0 0.8rem $lux400;
+    }
+}

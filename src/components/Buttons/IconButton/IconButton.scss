@@ -1,0 +1,18 @@
+.iconbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $lux700;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: $lux400;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

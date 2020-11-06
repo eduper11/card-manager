@@ -1,0 +1,35 @@
+.dashboard {
+    background-color: $lux50;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .header {
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .roundbutton {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .cards__container {
+        height: 100%;
+        padding: 3rem;
+        display: flex;
+        &--nocard {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .message {
+                font-size: 3rem;
+            }
+        }
+    }
+}

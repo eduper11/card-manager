@@ -1,0 +1,34 @@
+.input-text {
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+    &__box {
+        width: -webkit-fill-available;
+        color: $luxNeutral500;
+        padding: 1rem;
+        border: 0.1rem solid $luxNeutral300;
+        border-bottom: 0.2rem solid $luxNeutral400;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border-bottom-color: $lux200;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: transparent;
+            box-shadow: 0 0 0.8rem $lux400;
+            border-bottom-color: $lux700;
+        }
+    }
+
+    &__helpermessage {
+        position: absolute;
+        bottom: 0.5rem;
+    }
+}

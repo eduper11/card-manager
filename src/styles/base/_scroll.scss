@@ -1,0 +1,22 @@
+* {
+    scrollbar-color: $lux700 #363636;
+    scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #363636;
+    border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: $lux700;
+}
+
+*::-webkit-scrollbar-corner {
+    background-color: #363636;
+}

@@ -1,0 +1,39 @@
+.card {
+    position: relative;
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0 0 1.5rem $luxNeutral700;
+    border-radius: 0.5rem;
+    margin: 1rem;
+
+    &__title {
+        position: absolute;
+        width: 100%;
+        top: 17.5rem;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-interface-white;
+        text-overflow: ellipsis;
+    }
+
+    &__description {
+        height: 13rem;
+        padding: 1rem;
+        font-size: 1.4rem;
+
+        &--text {
+            height: 100%;
+            overflow: auto;
+        }
+    }
+
+    &__image {
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 20rem;
+    }
+}
