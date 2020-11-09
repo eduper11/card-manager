@@ -9,8 +9,6 @@ const EditCardForm = ({ closeButtonClick, submitChanges, card }) => {
         image: false,
     });
 
-    console.log('form en edit card', form);
-
     const imageRegexp = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
 
     //función que comprueba si el campo está vacío, y de ser así, setea el error

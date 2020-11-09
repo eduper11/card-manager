@@ -18,20 +18,15 @@ const Dashboard = () => {
     const [cards, setCards] = useState([]);
     const [orderBy, setOrderBy] = useState('Ordenar por');
 
-    console.log('Cards', cards);
-    console.log('editCard', editCard);
-
     const viewAddCard = () => {
         setAddCardFormVisibility(true);
     };
 
     const addCard = (content) => {
-        console.log('addCard');
         setCards([...cards, content]);
     };
 
     const removeCard = (id) => {
-        console.log('removeCard');
         const newCardsArray = cards.filter((card) => card.id !== id);
 
         setCards(newCardsArray);
@@ -59,7 +54,6 @@ const Dashboard = () => {
     };
 
     const viewEditCard = (card) => {
-        console.log('card', card);
         setEditCard(card);
     };
 
