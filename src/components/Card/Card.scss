@@ -6,6 +6,10 @@
     border-radius: 0.5rem;
     margin: 1rem;
 
+    @media (max-width: 760px) {
+        width: 100%;
+    }
+
     .iconbutton {
         position: absolute;
         color: $lux700;
