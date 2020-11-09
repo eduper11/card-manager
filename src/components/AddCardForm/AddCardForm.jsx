@@ -78,7 +78,7 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
         const { title, description, image } = form;
 
         //Comprobación del form
-        if (title.trim() !== '' && description.trim() !== '' && image.match(imageRegexp)) {
+        if (title.trim() !== '' && description.trim() !== '') {
             form.id = uuid();
             form.date = Date();
             onSubmit(form);
@@ -90,39 +90,22 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
             closeButtonClick();
         } else {
             // comprobación de cada posibilidad de estado del formulario
-            if (title.trim() === '' && description.trim() === '' && !image.match(imageRegexp)) {
-                setError({ title: true, description: true, image: true });
-            } else if (title.trim() === '' && description.trim() === '') {
+            if (title.trim() === '' && description.trim() === '') {
                 setError({
                     ...error,
                     title: true,
                     description: true,
-                });
-            } else if (title.trim() === '' && !image.match(imageRegexp)) {
-                setError({
-                    ...error,
-                    title: true,
-                    image: true,
-                });
-            } else if (description.trim() === '' && !image.match(imageRegexp)) {
-                setError({
-                    ...error,
-                    description: true,
-                    image: true,
                 });
             } else if (title.trim() === '') {
                 setError({
                     ...error,
                     title: true,
+                    image: true,
                 });
-            } else if (description.trim() === '') {
+            } else {
                 setError({
                     ...error,
                     description: true,
-                });
-            } else if (!image.match(imageRegexp)) {
-                setError({
-                    ...error,
                     image: true,
                 });
             }
