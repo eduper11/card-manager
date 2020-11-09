@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import AddCardForm from '../AddCardForm/AddCardForm';
 import Header from '../Header/Header';
@@ -13,10 +13,16 @@ import {
 import EditCardForm from '../EditCardForm/EditCardForm';
 
 const Dashboard = () => {
+    const actualCards = JSON.parse(localStorage.getItem('savecards') || []);
+
     const [addCardFormVisibility, setAddCardFormVisibility] = useState(false);
     const [editCard, setEditCard] = useState({});
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState(actualCards);
     const [orderBy, setOrderBy] = useState('Ordenar por');
+
+    useEffect(() => {
+        localStorage.setItem('savecards', JSON.stringify(cards));
+    }, [cards]);
 
     const viewAddCard = () => {
         setAddCardFormVisibility(true);
@@ -34,10 +40,6 @@ const Dashboard = () => {
 
     const saveCard = (content) => {
         const { id, title, description, image } = content;
-
-        // const newCardsArray = cards.filter((card) => card.id !== content.id);
-        // newCardsArray.push(content);
-        // setCards(newCardsArray);
 
         setCards(
             cards.map((card) => {
