@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const InputText = ({ name, placeholder, onChange, helpermessage }) => {
+export const InputText = ({ name, placeholder, onChange, helpermessage, value }) => {
     return (
         <div className='input-text'>
             <input
@@ -9,6 +9,7 @@ export const InputText = ({ name, placeholder, onChange, helpermessage }) => {
                 name={name}
                 placeholder={placeholder}
                 onChange={onChange}
+                value={value}
             />
             {helpermessage ? <p className='input-text__helpermessage'>{helpermessage}</p> : ''}
         </div>

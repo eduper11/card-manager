@@ -1,5 +1,5 @@
 .input-text {
-    padding: 2rem 0;
+    padding: 0 0 2.5rem 0;
     width: 100%;
     position: relative;
     &__box {
@@ -29,6 +29,7 @@
 
     &__helpermessage {
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 1rem;
+        color: $error400;
     }
 }
