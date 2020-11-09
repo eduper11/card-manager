@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/card-manager/static/css/main.0e1e14a9.chunk.css",
+    "main.js": "/card-manager/static/js/main.267abcfb.chunk.js",
+    "main.js.map": "/card-manager/static/js/main.267abcfb.chunk.js.map",
+    "runtime-main.js": "/card-manager/static/js/runtime-main.1cc69e6a.js",
+    "runtime-main.js.map": "/card-manager/static/js/runtime-main.1cc69e6a.js.map",
+    "static/js/2.156d4093.chunk.js": "/card-manager/static/js/2.156d4093.chunk.js",
+    "static/js/2.156d4093.chunk.js.map": "/card-manager/static/js/2.156d4093.chunk.js.map",
+    "static/js/3.8fc8bcb5.chunk.js": "/card-manager/static/js/3.8fc8bcb5.chunk.js",
+    "static/js/3.8fc8bcb5.chunk.js.map": "/card-manager/static/js/3.8fc8bcb5.chunk.js.map",
+    "index.html": "/card-manager/index.html",
+    "static/css/main.0e1e14a9.chunk.css.map": "/card-manager/static/css/main.0e1e14a9.chunk.css.map",
+    "static/js/2.156d4093.chunk.js.LICENSE.txt": "/card-manager/static/js/2.156d4093.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/card-manager/static/media/icomoon.e8f8756b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1cc69e6a.js",
+    "static/js/2.156d4093.chunk.js",
+    "static/css/main.0e1e14a9.chunk.css",
+    "static/js/main.267abcfb.chunk.js"
+  ]
+}
