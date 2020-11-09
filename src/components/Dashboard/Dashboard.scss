@@ -28,9 +28,15 @@
             }
         }
 
+        &__orderer-container {
+            position: absolute;
+            right: 3rem;
+            z-index: 2;
+        }
+
         &__container-cards {
             background-color: $lux50;
-            padding: 2rem;
+            padding: 5rem 2rem 2rem 2rem;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
