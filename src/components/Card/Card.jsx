@@ -1,17 +1,44 @@
 import React from 'react';
 import IconButton from '../Buttons/IconButton/IconButton';
 
-const Card = ({ title, description, image, removeCard }) => {
+const Card = ({
+    title,
+    description,
+    image,
+    iconPrimary,
+    iconPrimaryAction,
+    iconSecondary,
+    iconSecondaryAction,
+}) => {
+    const urlImage = image === '' ? 'https://thestonecafe.com/saved/noImageAvailable.gif' : image;
+
     return (
         <div className='card'>
             <IconButton
-                icon='sga-icon-times'
+                className='card__close'
+                icon={iconPrimary}
                 size='2rem'
-                onClick={() => {
-                    removeCard();
-                }}
+                onClick={
+                    iconPrimaryAction
+                        ? () => {
+                              iconPrimaryAction();
+                          }
+                        : () => {}
+                }
             />
-            <div className='card__image' style={{ backgroundImage: `url(${image})` }}></div>
+            <IconButton
+                className='card__edit'
+                icon={iconSecondary}
+                onClick={
+                    iconSecondaryAction
+                        ? () => {
+                              iconSecondaryAction();
+                          }
+                        : () => {}
+                }
+                size='2rem'
+            />
+            <div className='card__image' style={{ backgroundImage: `url(${urlImage})` }}></div>
             <h1 className='card__title'>{title}</h1>
             <div className='card__description'>
                 <p className='card__description--text'>{description}</p>
