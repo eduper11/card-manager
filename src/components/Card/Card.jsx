@@ -10,7 +10,10 @@ const Card = ({
     iconSecondary,
     iconSecondaryAction,
 }) => {
-    const urlImage = image === '' ? 'https://thestonecafe.com/saved/noImageAvailable.gif' : image;
+    const urlImage =
+        image === ''
+            ? 'https://andaluciaorienta.net/wp-content/themes/easymag-pro/images/no-image.png'
+            : image;
 
     return (
         <div className='card'>
