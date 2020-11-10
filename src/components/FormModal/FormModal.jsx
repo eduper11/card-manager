@@ -63,7 +63,7 @@ const FormModal = ({
     formFields,
 }) => {
     return (
-        <div className={`modal ${className}`}>
+        <div className={`modal ${className || ''}`}>
             <div className='form-container'>
                 <IconButton
                     onClick={() => closeButtonClick()}
