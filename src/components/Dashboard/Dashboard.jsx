@@ -13,7 +13,7 @@ import {
 import EditCardForm from '../EditCardForm/EditCardForm';
 
 const Dashboard = () => {
-    const actualCards = JSON.parse(localStorage.getItem('savecards') || []);
+    const actualCards = JSON.parse(localStorage.getItem('savecards')) || [];
 
     const [addCardFormVisibility, setAddCardFormVisibility] = useState(false);
     const [editCard, setEditCard] = useState({});
