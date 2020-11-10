@@ -1,5 +1,25 @@
 import React, { useState } from 'react';
 import FormModal from '../FormModal/FormModal';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+    /**
+     * className
+     */
+    className: PropTypes.string,
+    /**
+     * acción que lanza el botón de cerrar
+     */
+    closeButtonClick: PropTypes.func.isRequired,
+    /**
+     * acción de setear enviar info del form
+     */
+    onSubmit: PropTypes.func.isRequired,
+    /**
+     * información de la carta que se quiere editar
+     */
+    card: PropTypes.object.isRequired,
+};
 
 const EditCardForm = ({ closeButtonClick, submitChanges, card }) => {
     const [form, setForm] = useState(card);
@@ -118,5 +138,7 @@ const EditCardForm = ({ closeButtonClick, submitChanges, card }) => {
         />
     );
 };
+
+EditCardForm.propTypes = propTypes;
 
 export default EditCardForm;

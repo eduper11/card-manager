@@ -1,8 +1,24 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 import FormModal from '../FormModal/FormModal';
 
-const AddCardForm = ({ closeButtonClick, onSubmit }) => {
+const propTypes = {
+    /**
+     * className
+     */
+    className: PropTypes.string,
+    /**
+     * acción que lanza el botón de cerrar
+     */
+    closeButtonClick: PropTypes.func.isRequired,
+    /**
+     * acción de setear enviar info del form
+     */
+    onSubmit: PropTypes.func.isRequired,
+};
+
+const AddCardForm = ({ className, closeButtonClick, onSubmit }) => {
     const [form, setForm] = useState({
         title: '',
         description: '',
@@ -75,10 +91,10 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
         e.preventDefault();
 
         //nos tremos el state actual
-        const { title, description, image } = form;
+        const { title, description } = form;
 
         //Comprobación del form
-        if (title.trim() !== '' && description.trim() !== '') {
+        if (title.trim() !== '' && description.trim() !== '' && error.image === false) {
             form.id = uuid();
             form.date = Date();
             onSubmit(form);
@@ -100,13 +116,11 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
                 setError({
                     ...error,
                     title: true,
-                    image: true,
                 });
-            } else {
+            } else if (description.trim() === '') {
                 setError({
                     ...error,
                     description: true,
-                    image: true,
                 });
             }
         }
@@ -114,6 +128,7 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
 
     return (
         <FormModal
+            className={className}
             closeButtonClick={closeButtonClick}
             formTitle='Agrega tu tarjeta'
             submitButtonLabel='Añadir tarjeta'
@@ -141,5 +156,7 @@ const AddCardForm = ({ closeButtonClick, onSubmit }) => {
         />
     );
 };
+
+AddCardForm.propTypes = propTypes;
 
 export default AddCardForm;

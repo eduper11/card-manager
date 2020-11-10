@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
 import Icon from '../Icon/Icon';
+import PropTypes from 'prop-types';
 
-const Orderer = ({ orderOptions, selectedOption }) => {
+const propTypes = {
+    /**
+     * className
+     */
+    className: PropTypes.string,
+    /**
+     * opciones de ordenación
+     */
+    orderOptions: PropTypes.arrayOf(
+        PropTypes.shape({
+            /**
+             * nombre de la opción
+             */
+            name: PropTypes.string.isRequired,
+            /**
+             * acción que lanza el evento click en esa opción
+             */
+            action: PropTypes.func.isRequired,
+        }),
+    ),
+    /**
+     * opción que aparece como seleccionada
+     */
+    selectedOption: PropTypes.string.isRequired,
+};
+
+const Orderer = ({ className, orderOptions, selectedOption }) => {
     const [selectVisibility, setSelectVisibility] = useState(false);
 
     return (
-        <div className='orderer'>
+        <div className={`orderer ${className || ''}`}>
             <div
                 className={`orderer__selected ${selectVisibility ? 'focus' : ''}`}
                 onClick={() => setSelectVisibility(!selectVisibility)}
@@ -35,5 +62,7 @@ const Orderer = ({ orderOptions, selectedOption }) => {
         </div>
     );
 };
+
+Orderer.propTypes = propTypes;
 
 export default Orderer;

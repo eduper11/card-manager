@@ -1,9 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ButtonPrimary = ({ type, children, onClick }) => {
+const propTypes = {
+    /**
+     * className
+     */
+    className: PropTypes.string,
+    /**
+     * tipo del botón
+     */
+    type: PropTypes.string.isRequired,
+    /**
+     * acción que lanza el botón
+     */
+    onClick: PropTypes.func,
+};
+
+const ButtonPrimary = ({ className, type, children, onClick }) => {
     return (
         <button
-            className='buttonprimary'
+            className={`buttonprimary ${className || ''}`}
             type={type}
             onClick={
                 onClick
@@ -17,5 +33,7 @@ const ButtonPrimary = ({ type, children, onClick }) => {
         </button>
     );
 };
+
+ButtonPrimary.propTypes = propTypes;
 
 export default ButtonPrimary;
