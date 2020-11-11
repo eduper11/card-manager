@@ -24,3 +24,10 @@ Responsive.
 ### Deploy
 
 En proceso (github-pages not running for this project)
+
+### En proceso....
+
+EditCard y AddCard deben ser el mismo componente.
+Callbacks props modificar nombres
+Valor por defecto del Orderer (en el componente, y que no venga desde fuera)
+Validaciones de los formularios por prop en cada field con su propia validación
